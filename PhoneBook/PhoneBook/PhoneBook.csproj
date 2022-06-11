@@ -11,7 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="AllContacts.xaml.cs">
+      <DependentUpon>AllContacts.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AddNewContact.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="AllContacts.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
