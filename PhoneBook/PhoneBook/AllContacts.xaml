@@ -2,11 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhoneBook.Detail">
-    <ListView x:Name="postListView">
+    <ListView x:Name="postListView" Margin="15,15">
         <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}"/>
+            <DataTemplate >
                 
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="7"
+                                 Spacing="50">
+                        <Label Text="{Binding Name}" 
+                               FontSize="Medium"
+                               TextColor="Black"
+                               />
+                        <Label Text="{Binding PhoneNumber}"
+                               FontSize="Medium"/>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
